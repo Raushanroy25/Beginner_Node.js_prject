@@ -1,0 +1,72 @@
+{{> headers }}
+
+<center>
+    <div>
+        <h1>
+            <span style="color:#ff3547">Store</span>
+            <span style="color:#4B515D">|</span>
+            <span style="color:#33b5e5">Share</span>
+            <span style="color:#4B515D">|</span>
+            <span style="color:#00C851">Innovate</span>
+        </h1>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-12">
+            <div class="card mb-2" style="max-width: 600px;">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <!-- Default form login -->
+                            <form class="text-center border border-light p-5" action="#!">
+
+                                <p class="h4 mb-4">
+                                    <p class="h4 mb-4"><i style="font-size: 60px; color:#17a2b8"
+                                            class="fa fa-user-plus"></i></p>
+                                </p>
+                                <!-- Name -->
+
+                                <input type="text" id="fname" class="form-control mb-4" placeholder="Full Name">
+
+                                <!-- Email -->
+                                <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
+
+                                <!-- Password -->
+                                <input type="password" id="npass" class="form-control mb-4" placeholder="New Password">
+
+                                <!--Re Enter Password -->
+                                <input type="password" id="re_npass" class="form-control mb-4"
+                                    placeholder="Re Enter Password">
+
+                                <!-- Mobile -->
+
+                                <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile number">
+
+                                <div class="d-flex justify-content-around">
+                                    <div>
+                                        <!-- Remember me -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="defaultLoginFormRemember">
+                                            <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                                me</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- Forgot password -->
+                                        <a href="">Forgot password?</a>
+                                    </div>
+                                </div>
+                            </form> <button class="btn btn-info btn-block my-4" id="btn">Sign up</button>
+                            <p>Still a member?
+                                <a href="signin">Sign In</a>
+                            </p>
+                            <!-- Default form login -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+<script type="text/javascript" src="/static/js/signup.js"></script>
+{{> footer}}

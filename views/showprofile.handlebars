@@ -1,0 +1,28 @@
+{{> dash_header}}
+<center>
+    <div>
+        <hr>
+        <br>
+        <h3 id="idsofuser">{{ title }}</h3>
+        <hr>
+    </div>
+    <div class="container" style="display : inline">
+        <div class="row">
+            <div class="col-12" id="list_of_file">
+
+            </div>
+        </div>
+    </div>
+</center>
+{{> footer}}
+<script type="text/javascript">
+    let show_u = document.getElementById('show_user')
+
+    show_u.addEventListener('click', () => {
+        let r = `{{username.email}}`
+        swal(r, "Still logged in", 'success')
+    })
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/static/js/showprofile.js"></script>
+<script src="/static/js/liked.js"></script>

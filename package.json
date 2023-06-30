@@ -1,0 +1,54 @@
+{
+    "name": "aniket_raj",
+    "version": "1.0.0",
+    "description": "college project 3rd sem aniket raj",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "npm install -g pm2 && node ./node_js/packageInstall.js",
+        "start": "pm2 start ecosystem.config.js && node ./node_js/startinfo.js",
+        "stop": "pm2 stop index.js && node ./node_js/stopinfo.js",
+        "status": "pm2 status",
+        "open": "start chrome http://127.0.0.1:80"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amitabh-anandcl/college_project_1.git"
+    },
+    "keywords": [
+        "node",
+        "html",
+        "css",
+        "js"
+    ],
+    "author": "aniket raj",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/amitabh-anandcl/college_project_1/issues"
+    },
+    "homepage": "https://github.com/amitabh-anandcl/college_project_1#readme",
+    "dependencies": {
+        "aes256": "^1.0.4",
+        "base-64": "^0.1.0",
+        "chalk": "^2.4.2",
+        "child_process": "^1.0.2",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.17.1",
+        "express-favicon": "^2.0.1",
+        "express-handlebars": "^6.0.6",
+        "express-session": "^1.16.2",
+        "helmet": "^3.21.1",
+        "https": "^1.0.0",
+        "morgan": "^1.9.1",
+        "multer": "^1.4.2",
+        "node-emoji": "^1.10.0",
+        "os": "^0.1.1",
+        "request": "^2.88.0",
+        "serve-favicon": "^2.5.0",
+        "tape": "^4.11.0",
+        "utf8": "^3.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.5.1",
+        "eslint-config-google": "^0.14.0"
+    }
+}

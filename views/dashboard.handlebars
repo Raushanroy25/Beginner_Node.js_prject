@@ -1,0 +1,87 @@
+{{> dash_header}}
+
+<div>
+    <center>
+        <span id="user" style="display: none;">{{ username.email }}</span>
+        <form style="max-width: 500px">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Card Title</label>
+                <input type="text" name="card_title" class="form-control" id="card_t" aria-describedby="emailHelp"
+                    placeholder="Card Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Card description</label>
+                <input type="text" name="card_decs" class="form-control" id="card_d" aria-describedby="emailHelp"
+                    placeholder="Enter detail of your photo">
+            </div>
+        </form>
+        <form id="formd" style="max-width: 500px" enctype="multipart/form-data">
+            <label for="exampleInputEmail1">Upload photo</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" onchange="previewFile()" name="avatar" class="custom-file-input"
+                        id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01"></label>
+                </div>
+            </div>
+
+        </form>
+        <button type="submit" id="upload_btn" class="btn btn-primary">Upload</button>
+        <br>
+        <br>
+        <div class="container">
+            <h2>Progress Bar With Label</h2>
+            <div class="progress">
+                <div class="progress-bar" id="pbar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                    aria-valuemax="100" style="width:0%">
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h4>image preview</h4>
+        <img id="preimg" src="" height="200" alt="Image preview...">
+    </center>
+</div>
+<hr>
+<center>
+    <center>
+        <h2>Uploaded List</h2>
+    </center>
+    <hr>
+    <div id="list_of_file">
+
+    </div>
+</center>
+
+<script>
+    function previewFile() {
+        let preview = document.getElementById('preimg');
+        var file = document.getElementById('inputGroupFile01').files[0];
+        var reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+            preview.src = reader.result;
+        }, false);
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+{{> footer}}
+<script type="text/javascript">
+    let show_u = document.getElementById('show_user')
+
+    show_u.addEventListener('click', () => {
+        let r = `{{username.email}}`
+        swal(r, "Still logged in", 'success')
+    })
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/static/js/dashboard.js"></script>
+<script src="/static/js/liked.js"></script>

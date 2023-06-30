@@ -1,0 +1,53 @@
+{{> headers}}
+<center>
+    <div>
+        <h1>
+            <span style="color:#ff3547">Store</span>
+            <span style="color:#4B515D">|</span>
+            <span style="color:#33b5e5">Share</span>
+            <span style="color:#4B515D">|</span>
+            <span style="color:#00C851">Innovate</span>
+        </h1>
+    </div>
+    <div class="card mb-2" style="max-width: 600px;">
+        <div class="row no-gutters">
+            <div class="col-md-12">
+                <div class="card-body">
+                    <!-- Default form login -->
+                    <form class="text-center border border-light p-5">
+
+                        <p class="h4 mb-4"><i style="font-size: 60px; color:#17a2b8" class="fa fa-user"></i></p>
+                        <!-- Email -->
+                        <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
+
+                        <!-- Password -->
+                        <input type="password" id="pass" class="form-control mb-4" placeholder="New Password">
+
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <!-- Remember me -->
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                        me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- Forgot password -->
+                                <a href="">Forgot password?</a>
+                            </div>
+                        </div>
+
+                    </form>
+                    <button class="btn btn-info btn-block my-4" id="btn" type="btn">Sign In</button>
+                    <p>Not a member?
+                        <a href="/signup">Sign Up</a>
+                    </p>
+                    <!-- Default form login -->
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+<script type="text/javascript" src="/static/js/signin.js"></script>
+{{> footer}}

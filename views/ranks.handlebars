@@ -1,0 +1,25 @@
+{{> dash_header}}
+<center>
+    <h1>
+        Highest Rank Photos
+    </h1>
+</center>
+<hr>
+<div class="container" style="display : inline">
+    <div class="row">
+        <div class="col-12" id="put_content">
+
+        </div>
+    </div>
+</div>
+{{> footer}}
+<script type="text/javascript">
+    let show_u = document.getElementById('show_user')
+
+    show_u.addEventListener('click', () => {
+        let r = `{{username.email}}`
+        swal(r, "Still logged in", 'success')
+    })
+</script>
+<script type="text/javascript" src="/static/js/ranks.js"></script>
+<script src="/static/js/liked.js"></script>
